@@ -44,6 +44,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         val btnCapture = findViewById<Button>(R.id.CaptureBtn)
 
         btnCapture.setOnClickListener {
@@ -124,6 +126,12 @@ class MainActivity : AppCompatActivity() {
             var sub=findViewById<Button>(R.id.SubmitBtn)
             sub.visibility=View.VISIBLE
 
+            btnbak.setOnClickListener {
+                btnbak.visibility=View.INVISIBLE
+                val fintxt=findViewById<TextView>(R.id.finaltxt)
+                fintxt.visibility=View.INVISIBLE
+                btnname.visibility=View.VISIBLE
+            }
             getLastLocation()
 
 

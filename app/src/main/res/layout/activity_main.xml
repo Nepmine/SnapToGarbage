@@ -3,18 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@drawable/edited"
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
+
+    android:background="@drawable/edited"
+    android:foregroundTint="#FFDD00"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/edited"
+        android:scaleType="centerCrop" />
+
+    <!-- Semi-Transparent Overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000" />
+
 
     <Button
         android:id="@+id/CaptureBtn"
         style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
         android:layout_width="218dp"
         android:layout_height="82dp"
-        android:background="#FFC107"
+        android:backgroundTint="@color/yellow"
+        android:background="@color/yellow"
         android:elevation="5dp"
         android:text="Capture Trash"
         android:textSize="23dp"
@@ -33,7 +48,7 @@
         style="@style/ThemeOverlay.Material3.Button.ElevatedButton"
         android:layout_width="218dp"
         android:layout_height="82dp"
-        android:background="#FF9800"
+        android:backgroundTint="#FFFF00"
         android:text="Submit"
         android:textSize="23dp"
         android:textStyle="bold"
@@ -55,7 +70,7 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.37" />
@@ -80,30 +95,37 @@
         android:layout_height="164dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="Thank You"
+        android:text="You're making a   difference !!"
         android:textColor="#39FF14"
-        android:visibility="invisible"
         android:textSize="48sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.389" />
 
     <Button
         android:id="@+id/final_back"
         android:layout_width="177dp"
         android:layout_height="78dp"
-        android:backgroundTint="#38FF40"
+
+
+        android:layout_marginTop="141dp"
+
+        android:layout_marginBottom="208dp"
+        android:backgroundTint="#f5e5c4"
         android:gravity="center"
         android:text="More ?"
-
         android:textSize="25sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CaptureBtn"
-        app:layout_constraintVertical_bias="0.17" />
+        app:layout_constraintTop_toTopOf="@+id/finaltxt"
+        app:layout_constraintVertical_bias="0.53" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
